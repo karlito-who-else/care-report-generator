@@ -20,12 +20,20 @@ export default async function Home() {
             <SignOutButton />
           </div>
         ) : (
-          <Link
-            href={"/signin"}
-            className={cn(buttonVariants({ variant: "default" }))}
-          >
-            Sign In
-          </Link>
+          <div className="flex w-full flex-row gap-5">
+            <Link
+              href={"/signin"}
+              className={cn(buttonVariants({ variant: "default" }))}
+            >
+              Sign In
+              </Link>
+              <Link
+                href={"/signup"}
+                className={cn(buttonVariants({ variant: "secondary" }))}
+              >
+                Sign Up
+              </Link>
+            </div>
         )}
       </main>
     </div>
